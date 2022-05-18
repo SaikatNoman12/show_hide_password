@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f8f8;
+
+}
+
+.inputBox {
+    position: relative;
+    width: 400px;
+    height: 60px;
+}
+
+.inputBox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(77, 75, 75);
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.05),
+        inset -4px -4px 10px rgba(255, 255, 255, 1), 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.inputBox input::placeholder {
+    color: rgb(181, 181, 181);
+}
+
+
+
+#toggle {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    background-color: rgba(19, 136, 19, 0.642);
+    cursor: pointer;
+    z-index: 1111;
+    font-size: 28px;
+
+}
+
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    /* box-shadow: inset 0px 0px 4px rgba(19, 136, 19, 0.642); */
+
+}
+
+
+#toggle.hide {
+    background-color: rgba(255, 0, 0, 0.677);
+
+
+}
+
+#toggle.hide::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    /* box-shadow: inset 0px 0px 4px rgba(255, 0, 0, 0.677); */
+
+}
